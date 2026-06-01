@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spotify Lifetime Stats</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Spotify Lifetime Stats</h1>
+      <p>Drop in your Spotify Extended Streaming History JSON files and calculate lifetime listening stats locally in your browser.</p>
+      <p class="privacy">Your files are processed on your device only. Nothing is uploaded.</p>
+    </section>
+
+    <section class="card">
+      <label class="upload-box">
+        <input id="fileInput" type="file" accept=".json,application/json" multiple />
+        <span>Choose Spotify JSON files</span>
+        <small>Select all <code>Streaming_History_Audio_*.json</code> files</small>
+      </label>
+
+      <div class="actions">
+        <button id="processBtn">Generate Stats</button>
+        <button id="downloadMdBtn" disabled>Download Markdown</button>
+        <button id="downloadCsvBtn" disabled>Download Year CSV</button>
+      </div>
+
+      <div id="status" class="status">Waiting for files...</div>
+    </section>
+
+    <nav id="jumpNav" class="jump-nav hidden" aria-label="Jump to stats sections">
+      <a href="#summary">Summary</a>
+      <a href="#date-range">Date Range</a>
+      <a href="#top-artists">Top Artists</a>
+      <a href="#top-songs-hours">Top Songs by Hours</a>
+      <a href="#top-songs-plays">Top Songs by Plays</a>
+      <a href="#hours-per-year">Hours Per Year</a>
+      <button id="backToTopBtn" type="button">Top ↑</button>
+    </nav>
+
+    <section id="results" class="results hidden"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
