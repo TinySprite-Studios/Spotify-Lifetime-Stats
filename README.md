@@ -1,6 +1,7 @@
 # Spotify Lifetime Stats
 
 A simple local/browser tool for analysing Spotify Extended Streaming History JSON files.
+[Click Here to Use](https://tinysprite-studios.github.io/spotify-lifetime-stats/)
 
 ## What it does
 
