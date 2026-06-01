@@ -34,6 +34,33 @@ p {
   line-height: 1.5;
 }
 
+.data-request {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  max-width: 780px;
+}
+
+.data-request p {
+  margin: 0;
+}
+
+.spotify-link {
+  color: #1ed760;
+  font-weight: 800;
+  text-underline-offset: 4px;
+  width: fit-content;
+}
+
+.spotify-link:visited {
+  color: #1ed760;
+}
+
+.spotify-link:hover,
+.spotify-link:focus-visible {
+  color: #85efac;
+}
+
 .privacy {
   color: #85efac;
   font-weight: 700;
